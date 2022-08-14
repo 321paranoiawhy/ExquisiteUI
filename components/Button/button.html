@@ -1,16 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <wc-button w="10px" h="10px" type="stripe" ref="wcButton1"></wc-button> -->
-    <wc-button type="stripe" ref="wcButton1"></wc-button>
-    <wc-button type="sketch" ref="wcButton2"></wc-button>
-    <wc-button type="dribbble" ref="wcButton3"></wc-button>
-    <div onclick="change()" width="50px" height="50px">Click me</div>
+    <title>WC-Button</title>
+
+    <div>
+        <wc-button theme="primary small">Primary</wc-button>
+        <wc-button theme="primary medium">Primary</wc-button>
+        <wc-button theme="primary large">Primary</wc-button>
+
+        <wc-button theme="primary small error">Primary</wc-button>
+        <wc-button theme="primary medium error ">Primary</wc-button>
+        <wc-button theme="primary large error ">Primary</wc-button>
+    </div>
+
+    <div>
+        <wc-button theme="secondary small">Secondary</wc-button>
+        <wc-button theme="secondary medium">Secondary</wc-button>
+        <wc-button theme="secondary large">Secondary</wc-button>
+
+        <wc-button theme="secondary small error">Secondary</wc-button>
+        <wc-button theme="secondary medium error ">Secondary</wc-button>
+        <wc-button theme="secondary large error ">Secondary</wc-button>
+    </div>
+
+    <div>
+        <wc-button theme="tertiary small">Tertiary</wc-button>
+        <wc-button theme="tertiary medium">Tertiary</wc-button>
+        <wc-button theme="tertiary large">Tertiary</wc-button>
+
+        <wc-button theme="tertiary small error">Tertiary</wc-button>
+        <wc-button theme="tertiary medium error ">Tertiary</wc-button>
+        <wc-button theme="tertiary large error ">Tertiary</wc-button>
+    </div>
+
 </head>
 
 <body>
@@ -18,18 +44,7 @@
 </body>
 
 </html>
-<script src="./button.js"></script>
-<script>
-    // const node = document.querySelector('wc-button');
-    function change() {
-        // console.log(node);
-        // console.log(ref);
-        // ref.setAttribute('type', '');
-        // console.log(node.childNodes);
-        // console.log(node.attributes); // NameNodeMap
-        // console.log(node.getAttribute('w'));
-        // console.log(node.getAttribute('h'));
-        // console.log(node.getAttribute('type'));
-        // node.setAttribute('type', 'changed');
-    }
-</script>
+<!-- Uncaught SyntaxError: export declarations may only appear at top level of a module -->
+<!-- https://stackoverflow.com/questions/42237388/syntaxerror-import-declarations-may-only-appear-at-top-level-of-a-module -->
+<!-- <script src="./button.js"></script> -->
+<script type="module" src="./button.js"></script>

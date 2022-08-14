@@ -1,0 +1,171 @@
+/* define CSS variable in host pseudo element */
+:host {
+    /* now we provide styles below */
+    /* note / warning / tip / danger / comment */
+    --note-color: #17a2b8;
+    --warning-color: #f0ad4e;
+    --tip-color: #28a745;
+    --danger-color: #dc3545;
+    /* http://zhongguose.com/#meiguizi */
+    --comment-color: #ba2f7b;
+}
+
+:host div {
+    width: fit-content;
+    max-width: 60vw;
+    box-sizing: border-box;
+    padding: 0.5rem 1.5rem 0.5rem 1rem;
+    margin: 1rem auto;
+    border: 1px solid #eee;
+    border-radius: 0.25rem;
+    background-color: #fff;
+}
+
+@media (max-width: 600px) {
+    :host div {
+        max-width: 80vw !important;
+    }
+}
+
+:host svg {
+    width: 1rem;
+    height: 1rem;
+    fill: currentColor;
+    vertical-align: middle;
+    user-select: none;
+}
+
+:host span {
+    margin-left: 0.5rem;
+    font-weight: 600;
+}
+
+:host p {
+    word-wrap: break-word;
+}
+
+/* live demo: https://user-images.githubusercontent.com/44210522/50688702-ea774f00-1026-11e9-9281-ca615cb466f5.jpg */
+/* default theme */
+/* https://github.com/fzankl/gitbook-plugin-flexible-alerts/blob/master/src/book/style.css#L47-L78 */
+/* note */
+:host([type~="note"]) div {
+    border-left: 3px solid var(--note-color);
+}
+:host([type~="note"]) slot[name="icon"] {
+    color: var(--note-color);
+}
+:host([type~="note"]) slot[name="label"] {
+    color: var(--note-color);
+}
+
+/* warning */
+:host([type~="warning"]) div {
+    border-left: 3px solid var(--warning-color);
+}
+:host([type~="warning"]) slot[name="icon"] {
+    color: var(--warning-color);
+}
+:host([type~="warning"]) slot[name="label"] {
+    color: var(--warning-color);
+}
+
+/* tip */
+:host([type~="tip"]) div {
+    border-left: 3px solid var(--tip-color);
+}
+:host([type~="tip"]) slot[name="icon"] {
+    color: var(--tip-color);
+}
+:host([type~="tip"]) slot[name="label"] {
+    color: var(--tip-color);
+}
+
+/* danger */
+:host([type~="danger"]) div {
+    border-left: 3px solid var(--danger-color);
+}
+:host([type~="danger"]) slot[name="icon"] {
+    color: var(--danger-color);
+}
+:host([type~="danger"]) slot[name="label"] {
+    color: var(--danger-color);
+}
+
+/* comment */
+:host([type~="comment"]) div {
+    border-left: 3px solid var(--comment-color);
+}
+:host([type~="comment"]) slot[name="icon"] {
+    color: var(--comment-color);
+}
+:host([type~="comment"]) slot[name="label"] {
+    color: var(--comment-color);
+}
+
+/* flat theme */
+/* https://github.com/fzankl/gitbook-plugin-flexible-alerts/blob/master/src/book/style.css#L79-L126 */
+
+/* note */
+:host([theme~="flat"][type~="note"]) div {
+    color: #02587f;
+    background-color: #cdeefd;
+    border: 1px #b8e7fc;
+}
+:host([theme~="flat"][type~="note"]) slot[name="icon"] {
+    color: #01354d;
+}
+:host([theme~="flat"][type~="note"]) slot[name="label"] {
+    color: #01354d;
+}
+
+/* warning */
+:host([theme~="flat"][type~="warning"]) div {
+    color: #852d12;
+    background-color: #ffddd3;
+    border: 1px #ffd0c1;
+}
+:host([theme~="flat"][type~="warning"]) slot[name="icon"] {
+    color: #581e0c;
+}
+:host([theme~="flat"][type~="warning"]) slot[name="label"] {
+    color: #581e0c;
+}
+
+/* tip */
+:host([theme~="flat"][type~="tip"]) div {
+    color: #285b2a;
+    background-color: #dbefdc;
+    border: 1px #cde9ce;
+}
+:host([theme~="flat"][type~="tip"]) slot[name="icon"] {
+    color: #18381a;
+}
+:host([theme~="flat"][type~="tip"]) slot[name="label"] {
+    color: #18381a;
+}
+
+/* danger */
+:host([theme~="flat"][type~="danger"]) div {
+    color: #7f231c;
+    background-color: #fdd9d7;
+    border: 1px #fccac7;
+}
+:host([theme~="flat"][type~="danger"]) slot[name="icon"] {
+    color: #551713;
+}
+:host([theme~="flat"][type~="danger"]) slot[name="label"] {
+    color: #551713;
+}
+
+/* comment */
+:host([theme~="flat"][type~="comment"]) div {
+    color: #cf418f;
+    background-color: #f3cee2;
+    border: 1px #fccac7;
+}
+:host([theme~="flat"][type~="comment"]) slot[name="icon"] {
+    color: #db70ab;
+}
+:host([theme~="flat"][type~="comment"]) slot[name="label"] {
+    color: #db70ab;
+}

@@ -17,10 +17,50 @@
 * [Lit - official website](https://lit.dev/)
 * [Lit - GitHub](https://github.com/lit/lit)
 
-## `FAST`
+## `IBM - carbon-web-components`
+
+* [carbon-web-components - official website](https://web-components.carbondesignsystem.com/?path=/story/introduction-form-participation--page)
+* [carbon-web-components - GitHub](https://github.com/carbon-design-system/carbon-web-components)
+
+## `Microsoft - Fluent UI`
+
+* [Fluent UI - official website](https://docs.microsoft.com/en-us/fluent-ui/web-components/)
+* [Fluent UI - GitHub](https://github.com/microsoft/fluentui/tree/master/packages/web-components)
+
+## `Kor`
+
+* [Kor - official website](https://kor-ui.com/introduction/welcome)
+* [Kor - GitHub](https://github.com/kor-ui/kor)
+
+## `Wired`
+
+* [Wired- official website](https://wiredjs.com/)
+* [Wired- GitHub](https://github.com/rough-stuff/wired-elements)
+
+## `showlace`
+
+* [showlace - official website](https://shoelace.style/)
+* [showlace - GitHub](https://github.com/shoelace-style/shoelace)
+
+## `UI5 Web Components`
+
+* [UI5 Web Components - official website](https://sap.github.io/ui5-webcomponents/)
+* [UI5 Web Components - GitHub](https://github.com/SAP/ui5-webcomponents)
+
+## `Adobe - Spectrum Web Components`
+
+* [Spectrum Web Components - official website](https://opensource.adobe.com/spectrum-web-components/)
+* [Spectrum Web Components - GitHub](https://github.com/adobe/spectrum-web-components)
+
+## `Microsoft - FAST`
 
 * [FAST - official website](https://www.fast.design/)
 * [FAST - GitHub](https://github.com/microsoft/fast/)
+
+## `VSCode - VSCode Webview Elements`
+
+* [VSCode Webview Elements - official website](https://bendera.github.io/vscode-webview-elements/)
+* [VSCode Webview Elements - GitHub](https://github.com/bendera/vscode-webview-elements)
 
 ## `hybrids`
 

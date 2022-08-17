@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WC-Progress-Bar</title>
+</head>
+
+<body>
+    <!-- default style -->
+    <wc-progress-bar text-style=""></wc-progress-bar>
+
+    <!-- cancel animation -->
+    <wc-progress-bar animation="none"></wc-progress-bar>
+
+    <!-- set progress and animation attribute-->
+    <wc-progress-bar progress="20%" animation="0.3s ease-in-out"></wc-progress-bar>
+
+    <!-- 1. you can change the style of wc-progress-bar via: -->
+    <!-- document.querySelector('wc-progress-bar').shadowRoot.querySelector('div').style.backgroundColor ="red"; -->
+    <!-- document.querySelector('wc-progress-bar').shadowRoot.innerHTML+='<style></style>'; -->
+    <!-- 2. inline style -->
+    <!-- but this can only effect the wc-progress-bar -->
+    <!-- style='background-color: red;' -->
+    <!-- 3. using provided html properties -->
+    <!-- such as: progress-color / background-color -->
+    <wc-progress-bar theme="orange"></wc-progress-bar>
+    <wc-progress-bar theme="blue-magenta"></wc-progress-bar>
+    <wc-progress-bar theme="cyan"></wc-progress-bar>
+    <wc-progress-bar theme="pink"></wc-progress-bar>
+    <wc-progress-bar theme="green-cyan"></wc-progress-bar>
+
+    <!-- <wc-progress-bar type="single"></wc-progress-bar> -->
+    <!-- <wc-progress-bar type="multi github" gap="2px"></wc-progress-bar> -->
+    <wc-progress-bar progress-color="red" background-color="green"></wc-progress-bar>
+</body>
+
+</html>
+<!-- Uncaught SyntaxError: export declarations may only appear at top level of a module -->
+<!-- https://stackoverflow.com/questions/42237388/syntaxerror-import-declarations-may-only-appear-at-top-level-of-a-module -->
+<script type="module" src="./progress-bar.js"></script>

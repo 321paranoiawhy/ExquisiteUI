@@ -1,0 +1,18 @@
+:host {
+    box-sizing: border-box;
+
+    --border-radius: 6px;
+}
+
+:host div {
+    width: 100px;
+    height: 4px;
+    margin: 0.5rem 0;
+    border-radius: var(--border-radius);
+}
+
+:host div span {
+    display: block;
+    height: 100%;
+    border-radius: var(--border-radius);
+}

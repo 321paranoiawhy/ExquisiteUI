@@ -6,8 +6,8 @@ It has features below:
 
 * based on web components.
 * frameworkless, can be used in native environment and any other web framework like `Vue`、`React`、`Angular` and so on.
-* tiny and high performance
-* easy to use and beautiful user interface
+* tiny and high performance.
+* easy to use and beautiful user interface.
 
 # How to Use
 

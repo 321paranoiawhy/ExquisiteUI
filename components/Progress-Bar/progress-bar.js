@@ -38,10 +38,12 @@
 // https://www.ruanyifeng.com/blog/2020/12/fetch-tutorial.html
 const _response = await fetch('./colors/theme-color.json');
 const _themeColor = await _response.json();
-// or use like this:
+// or use via:
 // fetch('./colors/theme-color.json')
 //     .then(response => response.json())
 //     .then(data => console.log(data));
+
+
 
 export default class WC_Progress_Bar extends HTMLElement {
     constructor() {
@@ -53,7 +55,7 @@ export default class WC_Progress_Bar extends HTMLElement {
             mode: "open",
         });
 
-        // IIFE closure
+        // basic settings
         // const settings = {
         //     backgroundColor: this.getAttribute("background-color") || "#e5e5e5",
         //     progressColor: this.getAttribute("progress-color") || _themeColor[this.getAttribute("theme")] || "#ff942e",
@@ -61,11 +63,14 @@ export default class WC_Progress_Bar extends HTMLElement {
         //     animation: this.getAttribute("animation") || "0.3s ease-in-out",
         //     position: this.getAttribute("position") || "absolute",
         // }
+
+        // basic settings
         const settings = (() => {
             const backgroundColor = this.getAttribute("background-color") || "#e5e5e5";
             const progressColor = this.getAttribute("progress-color") || _themeColor[this.getAttribute("theme")] || "#ff942e";
             const progress = this.getAttribute("progress") || "50%";
             const animation = this.getAttribute("animation") || "0.3s ease-in-out";
+            // TODO
             const position = this.getAttribute("position") || "absolute";
             return {
                 backgroundColor,
@@ -76,39 +81,44 @@ export default class WC_Progress_Bar extends HTMLElement {
             };
         })();
 
-        // <span>${text}</span>
+        // create new CSS style sheets using CSSStyleSheet constructor
+        // let currentCSSStyleSheet = new CSSStyleSheet();
+        this.currentCSSStyleSheet = new CSSStyleSheet();
 
-        // <span><slot name='progress'></slot></span>
+        this.currentCSSStyleSheet.replace(`:host {
+        }
+        @keyframes speed {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: var(--progress, ${settings.progress});
+            }
+        }
+        :host div {
+            background-color: var(--background-color, ${settings.backgroundColor});
+        }
+        :host div span {
+            width: var(--progress, ${settings.progress});
+            background-color: var(--progress-color, ${settings.progressColor});
+        }
+        :host div:hover span {
+            animation: speed var(--animation, ${settings.animation});
+        }`);
+
+
+        this.shadowRoot.adoptedStyleSheets = [this.currentCSSStyleSheet];
 
         // structure: a span nested in a div, and a span after the div
         // CSS style: low priority -> high priority
         // progress-bar.css -> <style></style> -> inline-style
+
         this.shadowRoot.innerHTML = `
         <div>
         <span><slot name='progress'></slot></span>
         </div>
         <span><slot name='text'>111</slot></span>
         <style>@import "./progress-bar.css";</style>
-        <style>
-        @keyframes speed {
-            0% {
-                width: 0%;
-            }
-            100% {
-                width: ${settings.progress};
-            }
-        }
-        :host div {
-            background-color: ${settings.backgroundColor};
-        }
-        :host div span {
-            width: ${settings.progress};
-            background-color: ${settings.progressColor};
-        }
-        :host div:hover span {
-            animation: speed ${settings.animation};
-        }
-        </style>
         `;
     }
 
@@ -121,42 +131,74 @@ export default class WC_Progress_Bar extends HTMLElement {
 
     // Using the lifecycle callbacks: https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks
     attributeChangedCallback(name, oldValue, newValue) {
-        switch (name) {
-            case "background-color":
-                this.shadowRoot.querySelector('div').style.backgroundColor = newValue;
-                break;
-            case "progress-color":
-                this.shadowRoot.querySelector('div span').style.color = newValue;
-                break;
-            case "theme":
-                this.shadowRoot.querySelector('div span').style.color = newValue;
-                break;
-            case "progress":
-                this.shadowRoot.querySelector('div span').style.width = newValue;
-                break;
-            case "animation":
-                // before -> animation:
-                // after ;
-                // https://zh.javascript.info/regexp-lookahead-lookbehind#zong-jie
-                // notice: there should be no ; in newValue
-                // replace innerHTML with newValue
-                this.shadowRoot.innerHTML = this.shadowRoot.innerHTML.replace(/(?<=animation:)[\s\S]*(?=;)/, newValue);
-                console.log(this.shadowRoot.innerHTML);
-                break;
-            default:
-                break;
+        // avoid invoking when first connected
+        // only when value exactly changes from oldValue to newValue
+        if (oldValue && newValue !== oldValue) {
+            console.log(newValue);
+            // let obj = {};
+            // obj[`${name}`] = newValue;
+            // console.log(obj);
+            // this.update(obj);
+            this.update({ [name]: newValue });
         }
+        // if (oldValue && newValue !== oldValue) {
+        //     switch (name) {
+        //         case "background-color":
+        //             this.shadowRoot.querySelector('div').style.backgroundColor = newValue;
+        //             break;
+        //         case "progress-color":
+        //             this.shadowRoot.querySelector('div span').style.color = newValue;
+        //             break;
+        //         case "theme":
+        //             this.shadowRoot.querySelector('div span').style.color = newValue;
+        //             break;
+        //         case "progress":
+        //             this.shadowRoot.querySelector('div span').style.width = newValue;
+        //             this.settings.progress = newValue;
+        //             break;
+        //         case "animation":
+        //             // before -> animation:
+        //             // after ;
+        //             // https://zh.javascript.info/regexp-lookahead-lookbehind#zong-jie
+        //             // notice: there should be no ; in newValue
+        //             // replace innerHTML with newValue
+        //             this.shadowRoot.innerHTML = this.shadowRoot.innerHTML.replace(/(?<=animation:)[\s\S]*(?=;)/, newValue);
+        //             console.log(this.shadowRoot.innerHTML);
+        //             break;
+        //         default:
+        //             break;
+        //     }
+        // }
     }
-    // get backgroundColor() {
-    //     return this.getAttribute("background-color");
-    // }
-    // set backgroundColor(value) {
-    //     this.setAttribute("background-color", value);
-    // }
+    // update current CSSStyleSheet
+    update(newValue) {
+        // only receive an object parameter
+        if (typeof newValue !== 'object') {
+            throw new TypeError('Function parameter must be an object ! Please check the type of parameter.');
+        }
+        else {
+            let newStyle = '';
+            for (let key in newValue) {
+                // newStyle += key + ': ' + `${newValue[key]}` + ';';
+                newStyle += '--' + key + ': ' + `${newValue[key]}` + ';';
+            }
+            // delete the old style at index 0 and insert the new style at the same index
+            this.currentCSSStyleSheet.deleteRule(0);
+            this.currentCSSStyleSheet.insertRule(`:host {
+                ${newStyle}
+            }`, 0);
+        }
+        return this.currentCSSStyleSheet;
+        // update style via:
+        // let dom = document.querySelector('wc-progress-bar').shadowRoot;
+        // dom.update({'--progress':'10%','--progress-color':'red'});
+    };
 }
-
-// array composed of static properties to be observed
-// WC_Progress_Bar.observedAttributes = ["background-color", "progress-color", "theme", "progress", "animation"];
 
 // define the custom element
 customElements.define("wc-progress-bar", WC_Progress_Bar);
+
+// get class wc-progress-bar definition
+// const def = customElements.get('wc-progress-bar');
+// const newElement = new def();
+// document.body.appendChild(newElement);

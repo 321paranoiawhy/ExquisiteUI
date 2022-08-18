@@ -1,43 +1,50 @@
-button {
+:host {
+    --default-background-color: hsl(214, 100%, 48%);
+    --default-color: white;
+    --default-font-size: 1rem;
+}
+
+:host button {
     border: none;
     box-sizing: border-box;
     border-radius: 0.2rem;
     cursor: pointer;
     margin: 0.25rem 0;
     padding: 0.5rem 0.8rem;
+    background-color: var(
+        --wc-button-background-color,
+        var(--background-color, var(--default-background-color))
+    );
+    color: var(--color, var(--default-color));
+    font-size: var(--font-size, var(--default-font-size));
 }
 
 /* Attribute selectors: https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors */
-:host([theme~="primary"]) button {
-    background-color: hsl(214, 100%, 48%);
-    color: white;
+:host([theme~="error"]) button {
+    --background-color: red;
 }
-:host([theme~="primary"][theme~="error"]) button {
-    background-color: red;
-}
-
 :host([theme~="secondary"]) button {
-    background-color: hsla(214, 61%, 25%, 0.05);
-    color: hsl(214, 100%, 43%);
+    --background-color: hsla(214, 61%, 25%, 0.05);
+    --color: hsl(214, 100%, 43%);
 }
 :host([theme~="secondary"][theme~="error"]) button {
-    color: red;
+    --color: red;
 }
 
 :host([theme~="tertiary"]) button {
-    background-color: transparent;
-    color: hsl(214, 100%, 43%);
+    --background-color: transparent;
+    --color: hsl(214, 100%, 43%);
 }
 :host([theme~="tertiary"][theme~="error"]) button {
-    color: red;
+    --color: red;
 }
 
 :host([theme~="large"]) button {
-    font-size: 1.2rem;
+    --font-size: 1.2rem;
 }
 :host([theme~="medium"]) button {
-    font-size: 1rem;
+    --font-size: 1rem;
 }
 :host([theme~="small"]) button {
-    font-size: 0.8rem;
+    --font-size: 0.8rem;
 }

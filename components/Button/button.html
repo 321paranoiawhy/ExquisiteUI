@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WC-Button</title>
+    <!-- Uncaught SyntaxError: export declarations may only appear at top level of a module -->
+    <!-- https://stackoverflow.com/questions/42237388/syntaxerror-import-declarations-may-only-appear-at-top-level-of-a-module -->
+    <script type="module" src="./button.js"></script>
 </head>
 
 <body>
@@ -41,7 +44,3 @@
 </body>
 
 </html>
-<!-- Uncaught SyntaxError: export declarations may only appear at top level of a module -->
-<!-- https://stackoverflow.com/questions/42237388/syntaxerror-import-declarations-may-only-appear-at-top-level-of-a-module -->
-<!-- <script src="./button.js"></script> -->
-<script type="module" src="./button.js"></script>

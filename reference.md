@@ -1,16 +1,21 @@
-# `Web Components` Specifications
+# `Web Components Specifications`
 
 * [HTML Standard](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element)
 * [DOM Standard](https://dom.spec.whatwg.org/#interface-shadowroot)
+* [Web Components](https://github.com/WICG/webcomponents)
+* [W3C - Introduction to Web Components](https://www.w3.org/TR/components-intro/)
 
 # `Web Components`
 
 * [Web Components - MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
+* [webcomponents.js (v1 spec polyfills)](https://github.com/webcomponents/polyfills/tree/master/packages/webcomponentsjs)
 * [web-components-examples](https://github.com/mdn/web-components-examples)
 * [webcomponents.org](https://www.webcomponents.org/)
 * [Open Web Components](https://open-wc.org/)
 * [Polymer - GitHub](https://github.com/Polymer/polymer)
 * [Awesome Frameworkless](https://github.com/frameworkless-movement/awesome-frameworkless#javascript)
+
+# `Web Components Libraries`
 
 ## `Lit`
 
@@ -31,6 +36,16 @@
 
 * [Kor - official website](https://kor-ui.com/introduction/welcome)
 * [Kor - GitHub](https://github.com/kor-ui/kor)
+
+## `Skate`
+
+* [Skate - official website](https://skatejs.netlify.app/)
+* [Skate - GitHub](https://github.com/skatejs/skatejs)
+
+## `Skate`
+
+* [AMP - official website](https://amp.dev/)
+* [AMP - GitHub](https://github.com/ampproject/amphtml)
 
 ## `Wired`
 
@@ -102,6 +117,7 @@
 * [web-components - javascript.info](https://javascript.info/web-components)
 * [web-components - web.dev](https://web.dev/web-components/)
 * [Web-Components - wikipedia](https://en.wikipedia.org/wiki/Web_Components)
+* [An Introduction to Web Components - CSSTricks](https://css-tricks.com/an-introduction-to-web-components/)
 * [Custom Elements v1 - Reusable Web Components](https://web.dev/custom-elements-v1/)
 * [Shadow DOM v1 - Self-Contained Web Components](https://web.dev/shadowdom-v1/)
 * [A Complete Introduction to Web Components in 2022](https://kinsta.com/blog/web-components/)
@@ -112,7 +128,7 @@
 * [HTML Web Component using Vanilla JS - Part 2 - Ayush Gupta](https://ayushgp.xyz/html-web-components-using-vanilla-js-part-2/)
 * [HTML Web Component using Vanilla JS - Part 3 - Ayush Gupta](https://ayushgp.xyz/html-web-components-using-vanilla-js-part-3/)
 
-# `Web Components` in JavaScript Framework
+# `Web Components in JavaScript Frameworks`
 
 * [Web Components - Vue](https://vuejs.org/guide/extras/web-components.html)
 * [Web Components - React](https://reactjs.org/docs/web-components.html)
@@ -122,13 +138,13 @@
 # `Atomic CSS`
 
 * [Animate.css - GitHub](https://github.com/animate-css/animate.css)
-* [Animate.css - Website](https://animate.style/)
+* [Animate.css - official website](https://animate.style/)
 * [Tailwind CSS - GitHub](https://github.com/tailwindlabs/tailwindcss)
-* [Tailwind CSS - Website](https://tailwindcss.com/)
+* [Tailwind CSS - official website](https://tailwindcss.com/)
 * [UnoCSS - GitHub](https://github.com/unocss/unocss)
 * [UnoCSS - Playground](https://uno.antfu.me/play/)
 * [Reimagine Atomic CSS](https://antfu.me/posts/reimagine-atomic-css)
 * [Windi CSS - GitHub](https://github.com/windicss/windicss)
-* [Windi CSS - Website](https://windicss.org/)
+* [Windi CSS - official website](https://windicss.org/)
 * [Twind CSS - GitHub](https://github.com/tw-in-js/twind)
-* [Twind CSS - Website](https://twind.dev/)
+* [Twind CSS - official website](https://twind.dev/)

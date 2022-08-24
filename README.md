@@ -37,7 +37,9 @@ Just take a look at this more specified example using `wc-alerts` web components
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WC-Alerts</title>
+</head>
 
+<body>
     <wc-alerts type="note" label="note">
         <span slot="label">笔记</span>
         <p slot="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, asperiores esse ipsam eveniet
@@ -90,15 +92,12 @@ Just take a look at this more specified example using `wc-alerts` web components
     <wc-alerts type="comment" label="comment" theme="flat">
         <p slot="text">1111111111111111111111111111111111</p>
     </wc-alerts>
-</head>
 
-<body>
-
+    <!-- import alerts.js -->
+    <script type="module" src="./alerts.js"></script>
 </body>
 
 </html>
-<!-- import alerts.js -->
-<script type="module" src="./alerts.js"></script>
 ```
 
 ![five styles in default theme](./components/Flexible-Alerts/examples/images/default-theme.png)

@@ -1,8 +1,9 @@
 :host {
-    box-sizing: border-box;
     --border-radius: 6px;
 }
-
+/* :host * {
+    box-sizing: border-box;
+} */
 :host div {
     width: 100px;
     height: 4px;

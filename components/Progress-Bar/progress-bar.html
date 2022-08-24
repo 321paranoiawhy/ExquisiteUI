@@ -6,36 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WC-Progress-Bar</title>
-    <script type="module" src="./progress-bar.js"></script>
+    <!-- <script type="module" src="./progress-bar.js"></script> -->
 </head>
 
 <body>
-    <!-- default style -->
-    <!-- <wc-progress-bar></wc-progress-bar> -->
+    <h2>Theme (data-theme)</h2>
+    <wc-progress-bar
+        data-text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, rerum adipisci! Id nesciunt distinctio accusamus. Dolores delectus tempora, reprehenderit harum voluptas nobis eius, quae nostrum odio officia magni ad doloribus laudantium porro provident non vitae autem dolorem necessitatibus ullam quia error architecto doloremque facere? Delectus saepe ipsam quae obcaecati cupiditate.">
+    </wc-progress-bar>
+    <wc-progress-bar data-theme="orange"></wc-progress-bar>
+    <wc-progress-bar data-theme="blue-magenta"></wc-progress-bar>
+    <wc-progress-bar data-theme="cyan"></wc-progress-bar>
+    <wc-progress-bar data-theme="pink"></wc-progress-bar>
+    <wc-progress-bar data-theme="green-cyan"></wc-progress-bar>
 
-    <!-- cancel animation -->
-    <!-- <wc-progress-bar animation="none"></wc-progress-bar> -->
+    <h2>Left (data-text-position)</h2>
+    <wc-progress-bar data-text-position="left"></wc-progress-bar>
 
-    <!-- set progress and animation attribute-->
-    <wc-progress-bar progress="20%" animation="0.3s ease-in-out"></wc-progress-bar>
+    <h2>Right (data-text-position)</h2>
+    <wc-progress-bar data-text-position="right"></wc-progress-bar>
 
-    <!-- 1. you can change the style of wc-progress-bar via: -->
-    <!-- document.querySelector('wc-progress-bar').shadowRoot.querySelector('div').style.backgroundColor ="red"; -->
-    <!-- document.querySelector('wc-progress-bar').shadowRoot.innerHTML+='<style></style>'; -->
-    <!-- 2. inline style -->
-    <!-- but this can only effect the wc-progress-bar -->
-    <!-- style='background-color: red;' -->
-    <!-- 3. using provided html properties -->
-    <!-- such as: progress-color / background-color -->
+    <h2>Top (data-text-position)</h2>
+    <wc-progress-bar data-text-position="top"></wc-progress-bar>
 
-    <wc-progress-bar theme="orange"></wc-progress-bar>
-    <wc-progress-bar theme="blue-magenta"></wc-progress-bar>
-    <wc-progress-bar theme="cyan"></wc-progress-bar>
-    <wc-progress-bar theme="pink"></wc-progress-bar>
-    <wc-progress-bar theme="green-cyan"></wc-progress-bar>
+    <h2>Bottom (data-text-position)</h2>
+    <wc-progress-bar data-text-position="bottom"></wc-progress-bar>
 
-    <wc-progress-bar type="single"></wc-progress-bar>
-    <wc-progress-bar type="multi github" gap="2px"></wc-progress-bar>
+    <h2>Center (data-text-position)</h2>
+    <wc-progress-bar data-text-position="center"></wc-progress-bar>
+
+    <h2>All initializations</h2>
+    <wc-progress-bar data-theme="pink" data-text="text" data-text-position="center" data-span-width="30%">
+    </wc-progress-bar>
+
+    <script type="module" src="./progress-bar.js"></script>
 </body>
 
 </html>

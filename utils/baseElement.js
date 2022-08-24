@@ -8,4 +8,9 @@ export default class BaseElement extends HTMLElement {
             mode: "open",
         });
     }
+    // remove the web components
+    wc_Remove(f) {
+        this.remove();
+        f();
+    }
 }

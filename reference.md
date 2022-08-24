@@ -42,7 +42,7 @@
 * [Skate - official website](https://skatejs.netlify.app/)
 * [Skate - GitHub](https://github.com/skatejs/skatejs)
 
-## `Skate`
+## `AMP`
 
 * [AMP - official website](https://amp.dev/)
 * [AMP - GitHub](https://github.com/ampproject/amphtml)
@@ -127,6 +127,7 @@
 * [HTML Web Component using Vanilla JavaScript - Ayush Gupta](https://ayushgp.xyz/html-web-components-using-vanilla-js/)
 * [HTML Web Component using Vanilla JS - Part 2 - Ayush Gupta](https://ayushgp.xyz/html-web-components-using-vanilla-js-part-2/)
 * [HTML Web Component using Vanilla JS - Part 3 - Ayush Gupta](https://ayushgp.xyz/html-web-components-using-vanilla-js-part-3/)
+* [Shadow DOM: fast and encapsulated styles](https://meowni.ca/posts/shadow-dom/)
 
 # `Web Components in JavaScript Frameworks`
 

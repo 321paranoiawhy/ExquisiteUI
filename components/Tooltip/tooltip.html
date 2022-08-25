@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WC-Tooltip</title>
+    <style>
+        wc-tooltip {
+            margin: 0.5rem;
+            color: #000000d9;
+            border: 1px solid #d9d9d9;
+            border-radius: 0.25rem;
+        }
+
+        .container {
+            position: relative;
+            width: 20vw;
+            height: 40vh;
+            margin: 10vh auto;
+        }
+
+        .top {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+
+        .right {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+
+        .left {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <wc-tooltip data-text="Top Left" data-placement="top-left">TL</wc-tooltip>
+            <wc-tooltip data-text="Top Center" data-placement="top-center">TC</wc-tooltip>
+            <wc-tooltip data-text="Top Right" data-placement="top-right">TR</wc-tooltip>
+        </div>
+        <div class="right">
+            <wc-tooltip data-text="Right Top" data-placement="right-top">RT</wc-tooltip>
+            <wc-tooltip data-text="Right Center" data-placement="right-center">RC</wc-tooltip>
+            <wc-tooltip data-text="Right Bottom" data-placement="right-bottom">RB</wc-tooltip>
+        </div>
+        <div class="bottom">
+            <wc-tooltip data-text="Bottom Left" data-placement="bottom-left">BL</wc-tooltip>
+            <wc-tooltip data-text="Bottom Center" data-placement="bottom-center">BC</wc-tooltip>
+            <wc-tooltip data-text="Bottom Right" data-placement="bottom-right">BR</wc-tooltip>
+        </div>
+        <div class="left">
+            <wc-tooltip data-text="Left Top" data-placement="left-top">LT</wc-tooltip>
+            <wc-tooltip data-text="Left Center" data-placement="left-center">LC</wc-tooltip>
+            <wc-tooltip data-text="Left Bottom" data-placement="left-bottom">LB</wc-tooltip>
+        </div>
+    </div>
+
+    <!-- default -->
+    <wc-tooltip>
+        Default
+    </wc-tooltip>
+
+    <!-- replace -->
+    <wc-tooltip data-text="This is a replaced tooltip.">Replace Text</wc-tooltip>
+
+    <!-- theme -->
+    <div>
+        <wc-tooltip data-theme="github" data-text="GitHub Theme">GitHub Theme</wc-tooltip>
+        <!-- <wc-tooltip data-theme="light" data-text="Light Theme">Light Theme</wc-tooltip> -->
+        <wc-tooltip data-theme="material" data-text="Material Theme">Material Theme</wc-tooltip>
+    </div>
+
+    <script type="module" src="./tooltip.js"></script>
+</body>
+
+</html>

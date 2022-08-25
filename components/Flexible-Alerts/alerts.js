@@ -44,24 +44,19 @@ export default class WC_Alerts extends HTMLElement {
             }
         }
 
-        // import CSS
-        // 1. <style>@import "${new URL("alerts.css", import.meta.url)}";</style>
-        // https://github.com/LeaVerou/nudeui/blob/main/button-group/button-group.js#L9
-        // 2. <style>@import "./alerts.css";</style>
-        // https://www.mybj123.com/14082.html
-
         // structure: div > icon + span + p
         this.shadowRoot.innerHTML = `
-        <div>
+        <div class="container">
+        <div class="inner">
         <slot name='icon'>${handleIcon(type)}</slot>
         <span><slot name='label'>${capitalizedLabel}</slot></span>
+        </div>
         <p><slot name='text'>${capitalizedType}</slot></p>
         </div>
         <style>@import "./alerts.css";</style>
         `;
     }
 
-    // connectedCallback() fires when the element is inserted into the DOM. It's a good place to set the initial role, tabindex, internal state, and install event listeners.
     connectedCallback() {
         // tabindex: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex
         this.setAttribute('tabindex', 0);

@@ -1,0 +1,53 @@
+:root {
+    --scrollbar-width: initial;
+    --scrollbar-height: initial;
+    --scrollbar-thumb: initial;
+    --scrollbar-track-piece: initial;
+}
+
+/* For webkit browsers only */
+/* ::-webkit-scrollbar: https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar#css_scrollbar_selectors */
+
+/* ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--theme-color);
+}
+
+::-webkit-scrollbar-track-piece {
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.1);
+} */
+
+::-webkit-scrollbar {
+    /* 1 */
+}
+::-webkit-scrollbar-button {
+    /* 2 */
+}
+::-webkit-scrollbar-track {
+    /* 3 */
+}
+::-webkit-scrollbar-track-piece {
+    /* 4 */
+}
+::-webkit-scrollbar-thumb {
+    /* 5 */
+}
+::-webkit-scrollbar-corner {
+    /* 6 */
+}
+::-webkit-resizer {
+    /* 7 */
+}
+
+/* For FireFox browser only */
+/* CSS Scrollbars: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scrollbars */
+* {
+    scrollbar-width: initial;
+    scrollbar-color: initial;
+}

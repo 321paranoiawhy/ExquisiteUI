@@ -53,11 +53,11 @@ Just take a look at this more specified example using `wc-alerts` web components
 
     <!-- default theme -->
     <wc-alerts type="note" label="note">
-        <p slot="text">1111111111111111111111111111111111</p>
+        <p slot="text">This is a note.</p>
     </wc-alerts>
 
     <wc-alerts type="tip" label="tip">
-        <p slot="text">1111111111111111111111111111111111</p>
+        <p slot="text"></p>
     </wc-alerts>
 
     <wc-alerts type="warning" label="warning">
@@ -99,6 +99,8 @@ Just take a look at this more specified example using `wc-alerts` web components
 
 </html>
 ```
+
+[Codepen Live Demo](https://codepen.io/paraoiawhy/pen/yLKrzpY)
 
 ![five styles in default theme](./components/Flexible-Alerts/examples/images/default-theme.png)
 

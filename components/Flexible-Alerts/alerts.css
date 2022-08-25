@@ -10,9 +10,8 @@
     --comment-color: #ba2f7b;
 }
 
-:host div {
-    width: fit-content;
-    max-width: 60vw;
+div.container {
+    width: 60vw;
     box-sizing: border-box;
     padding: 0.5rem 1.5rem 0.5rem 1rem;
     margin: 1rem auto;
@@ -22,33 +21,42 @@
 }
 
 @media (max-width: 600px) {
-    :host div {
-        max-width: 80vw !important;
+    div.container {
+        width: 80vw !important;
     }
 }
 
-:host svg {
+div.inner {
+    display: flex;
+    align-items: center;
+}
+
+svg {
     width: 1rem;
     height: 1rem;
     fill: currentColor;
-    vertical-align: middle;
     user-select: none;
 }
 
-:host span {
+span {
     margin-left: 0.5rem;
     font-weight: 600;
 }
 
-:host p {
+p {
     word-wrap: break-word;
+}
+
+p::selection {
+    background-color: red;
 }
 
 /* live demo: https://user-images.githubusercontent.com/44210522/50688702-ea774f00-1026-11e9-9281-ca615cb466f5.jpg */
 /* default theme */
 /* https://github.com/fzankl/gitbook-plugin-flexible-alerts/blob/master/src/book/style.css#L47-L78 */
+
 /* note */
-:host([type~="note"]) div {
+:host([type~="note"]) div.container {
     border-left: 3px solid var(--note-color);
 }
 :host([type~="note"]) slot[name="icon"] {
@@ -59,7 +67,7 @@
 }
 
 /* warning */
-:host([type~="warning"]) div {
+:host([type~="warning"]) div.container {
     border-left: 3px solid var(--warning-color);
 }
 :host([type~="warning"]) slot[name="icon"] {
@@ -70,7 +78,7 @@
 }
 
 /* tip */
-:host([type~="tip"]) div {
+:host([type~="tip"]) div.container {
     border-left: 3px solid var(--tip-color);
 }
 :host([type~="tip"]) slot[name="icon"] {
@@ -81,7 +89,7 @@
 }
 
 /* danger */
-:host([type~="danger"]) div {
+:host([type~="danger"]) div.container {
     border-left: 3px solid var(--danger-color);
 }
 :host([type~="danger"]) slot[name="icon"] {
@@ -92,7 +100,7 @@
 }
 
 /* comment */
-:host([type~="comment"]) div {
+:host([type~="comment"]) div.container {
     border-left: 3px solid var(--comment-color);
 }
 :host([type~="comment"]) slot[name="icon"] {
@@ -106,7 +114,7 @@
 /* https://github.com/fzankl/gitbook-plugin-flexible-alerts/blob/master/src/book/style.css#L79-L126 */
 
 /* note */
-:host([theme~="flat"][type~="note"]) div {
+:host([theme~="flat"][type~="note"]) div.container {
     color: #02587f;
     background-color: #cdeefd;
     border: 1px #b8e7fc;
@@ -119,7 +127,7 @@
 }
 
 /* warning */
-:host([theme~="flat"][type~="warning"]) div {
+:host([theme~="flat"][type~="warning"]) div.container {
     color: #852d12;
     background-color: #ffddd3;
     border: 1px #ffd0c1;
@@ -132,7 +140,7 @@
 }
 
 /* tip */
-:host([theme~="flat"][type~="tip"]) div {
+:host([theme~="flat"][type~="tip"]) div.container {
     color: #285b2a;
     background-color: #dbefdc;
     border: 1px #cde9ce;
@@ -145,7 +153,7 @@
 }
 
 /* danger */
-:host([theme~="flat"][type~="danger"]) div {
+:host([theme~="flat"][type~="danger"]) div.container {
     color: #7f231c;
     background-color: #fdd9d7;
     border: 1px #fccac7;
@@ -158,7 +166,7 @@
 }
 
 /* comment */
-:host([theme~="flat"][type~="comment"]) div {
+:host([theme~="flat"][type~="comment"]) div.container {
     color: #cf418f;
     background-color: #f3cee2;
     border: 1px #fccac7;

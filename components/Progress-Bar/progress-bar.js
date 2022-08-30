@@ -67,7 +67,9 @@ export default class WC_Progress_Bar extends HTMLElement {
         const result = [];
         for (let key in style) {
             if (!Number.isNaN(Number(key))) {
-                result.push(style[key]);
+                if (style[key].startsWith('--')) {
+                    result.push(style[key])
+                };
             }
             else return result;
         }

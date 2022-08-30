@@ -6,3 +6,7 @@
 * [Ant Design Tooltip](https://ant.design/components/tooltip/)
 * [Angular Material tooltip](https://material.angular.io/components/tooltip/overview)
 * [sp-tooltip - Spectrum Web Components](https://opensource.adobe.com/spectrum-web-components/components/tooltip/)
+
+# `Animation`
+
+[FADE EXPAND SWING](https://codepen.io/neogomo/pen/BjqJzr)

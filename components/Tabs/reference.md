@@ -1,0 +1,5 @@
+* [How to make a tab control with Web Components](https://dev.to/ndesmic/how-to-make-a-tab-control-with-web-components-57on)
+* [How TO - Tabs - W3CSchools](https://www.w3schools.com/howto/howto_js_tabs.asp)
+* [Smart.tabs - Smart HTML Elements](https://www.htmlelements.com/demos/tabs/overview/)
+* [Tabs标签页 - Ant Design](https://ant.design/components/tabs-cn/)
+* [Tabs - Material Design](https://material.io/components/tabs)

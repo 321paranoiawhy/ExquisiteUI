@@ -4,6 +4,8 @@
 
 #### **GitHub Pages**
 
+[GitHub Pages](https://321paranoiawhy.github.io/ExquisiteUI/components/Button/button.html)
+
 <iframe
   src="https://321paranoiawhy.github.io/ExquisiteUI/components/Button/button.html"
   style="width: 100%; height: 300px; border: none;"

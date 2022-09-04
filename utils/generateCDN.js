@@ -21,7 +21,7 @@ function generateJSDelivr(url, min = false) {
     }
 }
 
-console.log(generateJSDelivr('https://github.com/321paranoiawhy/ExquisiteUI/blob/master/components/Tooltip/tooltip.js'));
+console.log(generateJSDelivr('https://github.com/321paranoiawhy/ExquisiteUI/blob/master/components/Button/button.js'));
 
 // // https://cdn.jsdelivr.net/gh/321paranoiawhy/ExquisiteUI/components/Progress-Bar/progress-bar.js
 // console.log(generateJSDelivr('https://github.com/321paranoiawhy/ExquisiteUI/blob/master/components/Progress-Bar/progress-bar.js'));

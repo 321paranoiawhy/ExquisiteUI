@@ -1,24 +1,3 @@
-# Installation
-
-
-<iframe
-  src="https://gist.github.com/321paranoiawhy/5752996fbf6b36b1b07e6f372b8de287.pibb"
-  style="width: 100%; height: 300px; border: none;"
->
-</iframe>
-
-<iframe
-  src="https://321paranoiawhy.github.io/ExquisiteUI/components/Button/button.html"
-  style="width: 100%; height: 300px; border: none;"
->
-</iframe>
-
-<iframe
-  src="https://321paranoiawhy.github.io/ExquisiteUI/components/Flexible-Alerts/alerts.html"
-  style="width: 100%; height: 300px; border: none;"
->
-</iframe>
-
 ## CDN
 
 ?> Take `tooltip` component as an example.

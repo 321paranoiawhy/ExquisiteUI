@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ExquisiteUI</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="keywords" content="ExquisiteUI,web components">
+  <meta name="description" content="A web components library">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- default theme -->
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"> -->
+
+  <!-- Simple Dark Theme: https://jhildenbiddle.github.io/docsify-themeable/#/themes?id=simple-dark -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
+
+  <style>
+    /* :root {
+      --theme-color: #6200ee;
+      --heading-color: #0096FF;
+      --docsifytabs-border-color: #ededed;
+      --docsifytabs-tab-color: #72FFFF;
+      --docsifytabs-tab-color--active: #0096FF;
+
+      --base-color: #24292f;
+      --link-color: #0969da;
+      --code-inline-color: white;
+      --code-inline-background: #6200ee;
+      --sidebar-nav-link-color--active: white;
+      --sidebar-nav-pagelink-background--active: #6200ee;
+    } */
+
+    button.docsify-tabs__tab {
+      cursor: pointer;
+    }
+
+    [data-tab="codepen"]:after {
+      content: 'Demo !';
+      position: absolute;
+      top: -0.8em;
+      right: 1em;
+      padding: 0.2em 0.35em;
+      border-radius: 3px;
+      background: red;
+      color: white;
+      font-family: sans-serif;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    span.token.keyword,
+    span.token.attr-value {
+      color: #80ffea;
+    }
+
+    span.token.string,
+    span.token.selector,
+    span.token.attr-name {
+      color: #ffff80;
+    }
+
+    span.token.function,
+    span.token.tag,
+    span.token.property,
+    span.token.operator {
+      color: #ff80bf;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'ExquisiteUI',
+      repo: 'https://github.com/321paranoiawhy/ExquisiteUI',
+      homepage: 'getting-started/quick-start.md',
+      loadSidebar: true,
+      coverpage: true,
+      auto2top: true,
+      maxLevel: 3,
+      subMaxLevel: 3,
+      cornerExternalLinkTarget: 'https://github.com/321paranoiawhy/ExquisiteUI',
+      copyCode: {
+        buttonText: 'Copy to clipboard',
+        errorText: 'Error',
+        successText: 'Copied',
+      },
+      search: {
+        depth: 3,
+        noData: 'No results!',
+        placeholder: 'Search...'
+      },
+      tabs: {
+        theme: 'material',
+        sync: false,
+        // persist: false,
+      },
+      pagination: {
+        crossChapter: true,
+        crossChapterText: true,
+      },
+      plugins: [
+        function (hook, vm) {
+          const footer = [
+            '<footer style="text-align: center;margin-top: 50px;">',
+            '<p>Powered by <a href="https://docsify.js.org/#/" target="_blank">Docsify</a></p>',
+            '<span> Made with ❤️ by <a href="https://www.linkedin.com/in/boopathikumar/" target="_blank">@321paranoiawhy</a>  &copy; 2022 </span>',
+            '</footer>'
+          ].join('');
+
+          hook.afterEach(function (html) {
+            return html + footer;
+          });
+        }
+      ],
+    };
+  </script>
+  <!-- Docsify v4 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- Latest (not recommended for production) -->
+  <script src="https://unpkg.com/docsify-copy-code"></script>
+  <!-- search -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+  <!-- zoom image -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- pagination -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- docsify-tabs (latest v1.x.x) -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <!-- prism bash highlight -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+
+</body>
+
+</html>

@@ -19,7 +19,7 @@ export default class WC_Tabs extends HTMLElement {
     // when need, just let CSSVariableValue be 'initial' to reset CSS variable
     set(CSSVariableName, CSSVariableValue) {
         // this.shadowRoot.styleSheets[0].cssRules[0].style.setProperty(CSSVariableName, CSSVariableValue);
-        this.style.setProperty(CSSVariableName, CSSVariableValue);
+        this.hostStyle.setProperty(CSSVariableName, CSSVariableValue);
     }
 
     get dataIndex() {
@@ -131,7 +131,7 @@ export default class WC_Tabs extends HTMLElement {
         </style>
         `;
 
-        this.style = this.shadowRoot.styleSheets[0].cssRules[0].style;
+        this.hostStyle = this.shadowRoot.styleSheets[0].cssRules[0].style;
     }
 
     updatePosition() {

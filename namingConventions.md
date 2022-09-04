@@ -30,31 +30,7 @@ For example:
 
 # `HTML attribute name`
 
-`<wc-button xxx='yyy'></wc-button>`, `xxx` should be named in `data-wc-settings`. It should be a string somewhat similar to `JSON`, for example:
-
-`<wc-button data-wc-settings="{ 'theme': 'orange' }"></wc-button>`
-
-So that its value can be converted to an object via:
-
-```JavaScript
-// JavaScript
-const dom = document.querySelector('wc-button');
-
-// get value of 'data-wc-settings' attribute
-let value = dom.getAttribute('data-wc-settings'); // "{ 'theme': 'orange' }"
-// or access dataset property of the DOM
-// 'data-wc-settings' attribute will be converted to
-// wcSettings property of DOM's dataset property
-// let value = dom.dataset.wcSettings; // "{ 'theme': 'orange' }"
-
-// before converting it to an object
-// replace all `'` to `"`, or it would throw an Uncaught SyntaxError
-JSON.parse(value.replace(/'/g, '"')); // '{ "theme": "orange" }'
-```
-
-Notice that besides `data-wc-settings`, there are no any other attributes added in `wc-button` here. This is a setting on purpose, in order not to leave too many attributes in the element. And users can add attributes whenever you need. But be cautious about adding too many, however, that's up to you.
-
-And there is a recommendation that `data-wc-settings` attribute value is just for initialization such as web components styles. Do not try to change it after web components are connected to the DOM. Whenever you want to style the element inside `shadow DOM`, you can try via the following two ways:
+`<wc-button data-xxx='yyy'></wc-button>`
 
 ## change `CSS variables value` in `CSS`
 

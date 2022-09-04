@@ -6,41 +6,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WC-Button</title>
-    <!-- Uncaught SyntaxError: export declarations may only appear at top level of a module -->
-    <!-- https://stackoverflow.com/questions/42237388/syntaxerror-import-declarations-may-only-appear-at-top-level-of-a-module -->
-    <script type="module" src="./button.js"></script>
+    <style>
+        div {
+            text-align: center;
+            margin: 1rem;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
+    <h2>data-size</h2>
     <div>
-        <wc-button theme="primary small">Primary</wc-button>
-        <wc-button theme="primary medium">Primary</wc-button>
-        <wc-button theme="primary large">Primary</wc-button>
-
-        <wc-button theme="primary small error">Primary</wc-button>
-        <wc-button theme="primary medium error ">Primary</wc-button>
-        <wc-button theme="primary large error ">Primary</wc-button>
+        <wc-button data-size="small">Small Button</wc-button>
+        <wc-button>Medium Button (default)</wc-button>
+        <wc-button data-size="large">Large Button</wc-button>
     </div>
 
+    <h2>data-round</h2>
     <div>
-        <wc-button theme="secondary small">Secondary</wc-button>
-        <wc-button theme="secondary medium">Secondary</wc-button>
-        <wc-button theme="secondary large">Secondary</wc-button>
-
-        <wc-button theme="secondary small error">Secondary</wc-button>
-        <wc-button theme="secondary medium error ">Secondary</wc-button>
-        <wc-button theme="secondary large error ">Secondary</wc-button>
+        <!-- <wc-button data-round>Round</wc-button> -->
+        <wc-button data-theme="bootstrap" data-round>Round</wc-button>
+        <wc-button data-theme="bootstrap-outline" data-round>Round</wc-button>
+        <wc-button data-theme="element" data-round>Round</wc-button>
+        <wc-button data-theme="element-plain" data-round>Round</wc-button>
     </div>
 
+    <h2>bootstrap theme</h2>
     <div>
-        <wc-button theme="tertiary small">Tertiary</wc-button>
-        <wc-button theme="tertiary medium">Tertiary</wc-button>
-        <wc-button theme="tertiary large">Tertiary</wc-button>
-
-        <wc-button theme="tertiary small error">Tertiary</wc-button>
-        <wc-button theme="tertiary medium error ">Tertiary</wc-button>
-        <wc-button theme="tertiary large error ">Tertiary</wc-button>
+        <wc-button data-theme="bootstrap" data-type="primary">Primary</wc-button>
+        <wc-button data-theme="bootstrap" data-type="secondary">Secondary</wc-button>
+        <wc-button data-theme="bootstrap" data-type="success">Success</wc-button>
+        <wc-button data-theme="bootstrap" data-type="danger">Danger</wc-button>
+        <wc-button data-theme="bootstrap" data-type="warning">Warning</wc-button>
+        <wc-button data-theme="bootstrap" data-type="info">Info</wc-button>
+        <wc-button data-theme="bootstrap" data-type="light">Light</wc-button>
+        <wc-button data-theme="bootstrap" data-type="dark">Dark</wc-button>
+        <wc-button data-theme="bootstrap" data-type="link">Link</wc-button>
     </div>
+
+    <h2>bootstrap-outline theme</h2>
+    <div>
+        <wc-button data-theme="bootstrap-outline" data-type="primary">Primary</wc-button>
+        <wc-button data-theme="bootstrap-outline" data-type="secondary">Secondary</wc-button>
+        <wc-button data-theme="bootstrap-outline" data-type="success">Success</wc-button>
+        <wc-button data-theme="bootstrap-outline" data-type="danger">Danger</wc-button>
+        <wc-button data-theme="bootstrap-outline" data-type="warning">Warning</wc-button>
+        <wc-button data-theme="bootstrap-outline" data-type="info">Info</wc-button>
+        <wc-button data-theme="bootstrap-outline" data-type="light">Light</wc-button>
+        <wc-button data-theme="bootstrap-outline" data-type="dark">Dark</wc-button>
+    </div>
+
+    <h2>element theme</h2>
+    <div>
+        <wc-button data-theme="element">Default</wc-button>
+        <wc-button data-theme="element" data-type="primary">Primary</wc-button>
+        <wc-button data-theme="element" data-type="success">Success</wc-button>
+        <wc-button data-theme="element" data-type="info">Info</wc-button>
+        <wc-button data-theme="element" data-type="warning">Warning</wc-button>
+        <wc-button data-theme="element" data-type="danger">Danger</wc-button>
+    </div>
+
+    <h2>element-plain theme</h2>
+    <div>
+        <wc-button data-theme="element-plain">Plain</wc-button>
+        <wc-button data-theme="element-plain" data-type="primary">Primary</wc-button>
+        <wc-button data-theme="element-plain" data-type="success">Success</wc-button>
+        <wc-button data-theme="element-plain" data-type="info">Info</wc-button>
+        <wc-button data-theme="element-plain" data-type="warning">Warning</wc-button>
+        <wc-button data-theme="element-plain" data-type="danger">Danger</wc-button>
+    </div>
+
+    <h2>element theme & data-round</h2>
+    <div>
+        <wc-button data-theme="element" data-round>Default-Round</wc-button>
+        <wc-button data-theme="element" data-type="primary" data-round>Primary</wc-button>
+        <wc-button data-theme="element" data-type="success" data-round>Success</wc-button>
+        <wc-button data-theme="element" data-type="info" data-round>Info</wc-button>
+        <wc-button data-theme="element" data-type="warning" data-round>Warning</wc-button>
+        <wc-button data-theme="element" data-type="danger" data-round>Danger</wc-button>
+    </div>
+
+    <h2>element-plain theme & data-round</h2>
+    <div>
+        <wc-button data-theme="element-plain" data-round>Plain-Round</wc-button>
+        <wc-button data-theme="element-plain" data-type="primary" data-round>Primary</wc-button>
+        <wc-button data-theme="element-plain" data-type="success" data-round>Success</wc-button>
+        <wc-button data-theme="element-plain" data-type="info" data-round>Info</wc-button>
+        <wc-button data-theme="element-plain" data-type="warning" data-round>Warning</wc-button>
+        <wc-button data-theme="element-plain" data-type="danger" data-round>Danger</wc-button>
+    </div>
+
+    <script type="module" src="./button.js"></script>
 </body>
 
 </html>

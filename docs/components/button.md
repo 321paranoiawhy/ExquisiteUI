@@ -1,4 +1,5 @@
-## Demo
+# Button
+# Demo
 
 <!-- tabs:start -->
 
@@ -22,14 +23,31 @@
 
 <!-- tabs:end -->
 
-## HTML Structure
+# HTML Structure
 
 ```HTML
 <button><slot part="button"></slot></button>
 ```
-## HTML Attribute
+# HTML Attribute
 
-### data-theme
+## Overview
+
+| Attribute  |  Type   |      Default value      |                     Optional value                      |
+| :--------: | :-----: | :---------------------: | :-----------------------------------------------------: |
+| data-theme | string  |        bootstrap        | bootstrap / bootstrap-outline / element / element-plain |
+| data-type  | string  | depends on `data-theme` |                 depends on `data-theme`                 |
+| data-size  | string  |         medium          |                 small / medium / large                  |
+| data-round | boolean |          false          |                      true / false                       |
+
+## data-theme
+
+### bootstrap
+
+Reference: [Bootstrap Examples](https://getbootstrap.com/docs/4.0/components/buttons/#examples)
+
+| Attribute |  Type  | Default value |                                Optional value                                 |
+| :-------: | :----: | :-----------: | :---------------------------------------------------------------------------: |
+| data-type | string |    primary    | primary / secondary / success / danger / warning / info / light / dark / link |
 
 <!-- tabs:start -->
 
@@ -57,6 +75,14 @@
 
 <!-- tabs:end -->
 
+### bootstrap-outline
+
+Reference: [Bootstrap: Outline-buttons](https://getbootstrap.com/docs/4.0/components/buttons/#outline-buttons)
+
+| Attribute |  Type  | Default value |                                Optional value                                 |
+| :-------: | :----: | :-----------: | :---------------------------------------------------------------------------: |
+| data-type | string |    primary    | primary / secondary / success / danger / warning / info / light / dark / link |
+
 <!-- tabs:start -->
 
 #### **bootstrap-outline**
@@ -83,6 +109,14 @@
 
 <!-- tabs:end -->
 
+### element
+
+Reference: [Element UI: button Basic usage](https://element.eleme.io/#/en-US/component/button#basic-usage)
+
+| Attribute |  Type  | Default value |               Optional value                |
+| :-------: | :----: | :-----------: | :-----------------------------------------: |
+| data-type | string |       /       | primary / success / info / warning / danger |
+
 <!-- tabs:start -->
 
 #### **element**
@@ -105,6 +139,12 @@
 </iframe>
 
 <!-- tabs:end -->
+
+### element-plain
+
+| Attribute |  Type  | Default value |               Optional value                |
+| :-------: | :----: | :-----------: | :-----------------------------------------: |
+| data-type | string |       /       | primary / success / info / warning / danger |
 
 <!-- tabs:start -->
 
@@ -129,7 +169,11 @@
 
 <!-- tabs:end -->
 
-### data-size
+## data-size
+
+| Attribute |  Type  | Default value |     Optional value     |
+| :-------: | :----: | :-----------: | :--------------------: |
+| data-size | string |    medium     | small / medium / large |
 
 <!-- tabs:start -->
 
@@ -151,14 +195,19 @@
 
 <!-- tabs:end -->
 
-### data-round
+## data-round
+
+| Attribute |  Type   | Default value | Optional value |
+| :-------: | :-----: | :-----------: | :------------: |
+| data-size | boolean |     false     |  true / false  |
 
 <!-- tabs:start -->
 
 #### **HTML**
 
 ```HTML
-<!-- <wc-button data-round>Round</wc-button> -->
+<wc-button data-theme="bootstrap">Not Round</wc-button>
+
 <wc-button data-theme="bootstrap" data-round>Round</wc-button>
 <wc-button data-theme="bootstrap-outline" data-round>Round</wc-button>
 <wc-button data-theme="element" data-round>Round</wc-button>

@@ -86,7 +86,7 @@ export default class WC_Tooltip extends HTMLElement {
         };
 
         this.shadowRoot.innerHTML = `
-        <slot></slot>
+        <slot part="tooltip"></slot>
         <style>
         :host {
             display: inline-block;

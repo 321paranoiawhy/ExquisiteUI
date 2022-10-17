@@ -48,7 +48,7 @@
 </head>
 
 <body>
-    <h2>Placements</h2>
+    <h2>data-placement</h2>
     <div class="container">
         <div class="top">
             <wc-tooltip data-text="Top Left" data-placement="top-left">TL</wc-tooltip>
@@ -72,39 +72,34 @@
         </div>
     </div>
 
-    <!-- default -->
-    <wc-tooltip>Default</wc-tooltip>
-
-    <!-- replace -->
-    <wc-tooltip data-text="This is a replaced tooltip.">Replace Text</wc-tooltip>
-
-    <wc-tooltip style="--background-color: red;">Change background-color to red</wc-tooltip>
-
-    <wc-tooltip>
-        <div>Div 1</div>
-        <div>Div 2</div>
-    </wc-tooltip>
-
-    <!-- theme -->
     <div style="text-align: center;">
-        <h2>Themes</h2>
+        <h2>Customization</h2>
+        <wc-tooltip>Default</wc-tooltip>
+        <wc-tooltip data-text="This is a replaced tooltip.">Replace Text</wc-tooltip>
+        <wc-tooltip style="--background-color: red;">Change background-color to red</wc-tooltip>
+        <wc-tooltip>
+            <div>Div 1</div>
+            <div>Div 2</div>
+        </wc-tooltip>
+        <!-- To render a space (no-break space) in tooltip, use double spaces instead. -->
+        <!-- or \a0 \A0 \00a0 \00A0 \0000a0 \0000A0 -->
+        <!-- See more: https://css-tricks.com/snippets/html/glyphs/ -->
+        <!-- https://www.amp-what.com/unicode/search/%3E -->
+        <wc-tooltip data-text="粘贴  |  #  |  搜一搜  |  边写边译">WeChat</wc-tooltip>
+        <wc-tooltip data-text="First Paragraph\A Second Paragraph">Tooltips in two lines</wc-tooltip>
+        <wc-tooltip data-text="<p>First Paragraph</p><p>Second Paragraph</p>">Tooltip does not support HTML</wc-tooltip>
+    </div>
+
+    <div style="text-align: center;">
+        <h2>data-theme</h2>
         <wc-tooltip data-theme="github" data-text="GitHub Theme">GitHub Theme</wc-tooltip>
         <wc-tooltip data-theme="light" data-text="Light Theme">Light Theme</wc-tooltip>
         <wc-tooltip data-theme="material" data-text="Material Theme">Material Theme</wc-tooltip>
     </div>
 
-    <!-- To render a space (no-break space) in tooltip, use double spaces instead. -->
-    <!-- or \a0 \A0 \00a0 \00A0 \0000a0 \0000A0 -->
-    <!-- See more: https://css-tricks.com/snippets/html/glyphs/ -->
-    <!-- https://www.amp-what.com/unicode/search/%3E -->
-    <wc-tooltip data-text="粘贴  |  #  |  搜一搜  |  边写边译">WeChat</wc-tooltip>
-
-    <wc-tooltip data-text="First Paragraph\A Second Paragraph">Tooltips in two lines</wc-tooltip>
-
-    <wc-tooltip data-text="<p>First Paragraph</p><p>Second Paragraph</p>">Tooltip does not support HTML</wc-tooltip>
 
 
-    <h2>Animation (flow-in)</h2>
+    <h2>data-animation (flow-in)</h2>
     <div class="container">
         <div class="top">
             <wc-tooltip data-text="Top Left" data-placement="top-left" data-animation="flow-in">TL</wc-tooltip>
@@ -129,7 +124,7 @@
         </div>
     </div>
 
-    <h2>Animation (flow-out)</h2>
+    <h2>data-animation (flow-out)</h2>
     <div class="container">
         <div class="top">
             <wc-tooltip data-text="Top Left" data-placement="top-left" data-animation="flow-out">TL</wc-tooltip>
@@ -154,7 +149,7 @@
         </div>
     </div>
 
-    <h2>Animation (expand)</h2>
+    <h2>data-animation (expand)</h2>
     <div class="container">
         <div class="top">
             <wc-tooltip data-text="Top Left" data-placement="top-left" data-animation="expand">TL</wc-tooltip>
@@ -179,7 +174,7 @@
         </div>
     </div>
 
-    <h2>Animation (swing)</h2>
+    <h2>data-animation (swing)</h2>
     <div class="container">
         <div class="top">
             <wc-tooltip data-text="Top Left" data-placement="top-left" data-animation="swing">TL</wc-tooltip>

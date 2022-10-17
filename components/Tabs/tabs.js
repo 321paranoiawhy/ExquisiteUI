@@ -62,8 +62,8 @@ export default class WC_Tabs extends HTMLElement {
         this.currentIndex = this.dataIndex || 0;
 
         this.shadowRoot.innerHTML = `
-        <div class="tab"><slot name="tab"></slot><div class="border"></div></div>
-        <div class="panel"><slot name="panel"></slot></div>
+        <div class="tab"><slot name="tab" part="tab"></slot><div class="border"></div></div>
+        <div class="panel"><slot name="panel" part="panel"></slot></div>
         <style>
         :host {
             --flex-direction: initial;
@@ -175,7 +175,7 @@ export default class WC_Tabs extends HTMLElement {
 
         this.dom.tabArray.forEach(element => {
             element.setAttribute('tabindex', 0);
-            if (element.getAttribute('data-disabled') === "true") {
+            if (element.hasAttribute('data-disabled')) {
                 element.style.setProperty('--tab-cursor', 'not-allowed');
                 element.style.setProperty('--tab-color', '#00000040');
                 element.style.setProperty('--tab-hover-color', '#00000040');
@@ -195,7 +195,7 @@ export default class WC_Tabs extends HTMLElement {
 
     onTabClick(e) {
         const index = this.dom.tabArray.indexOf(e.target);
-        if (e.target.getAttribute("data-disabled") == "true") return;
+        if (e.target.hasAttribute("data-disabled")) return;
         if (e.target.slot === 'tab' && index !== this.currentIndex) {
             // remove selected class
             this.dom.tabArray[this.currentIndex].classList.remove('selected');

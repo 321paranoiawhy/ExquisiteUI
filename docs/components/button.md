@@ -1,4 +1,21 @@
 # Button
+
+# CDN
+
+<!-- tabs:start -->
+
+#### **jsDelivr**
+
+[button.js](https://cdn.jsdelivr.net/gh/321paranoiawhy/ExquisiteUI/components/Button/button.js)
+
+#### **unpkg**
+
+TODO
+
+<!-- tabs:end -->
+
+?> Source code: [button.js - GitHub](https://github.com/321paranoiawhy/ExquisiteUI/blob/master/components/Button/button.js)
+
 # Demo
 
 <!-- tabs:start -->
@@ -197,9 +214,9 @@ Reference: [Element UI: button Basic usage](https://element.eleme.io/#/en-US/com
 
 ## data-round
 
-| Attribute |  Type   | Default value | Optional value |
-| :-------: | :-----: | :-----------: | :------------: |
-| data-size | boolean |     false     |  true / false  |
+| Attribute  |  Type   | Default value | Optional value |
+| :--------: | :-----: | :-----------: | :------------: |
+| data-round | boolean |     false     |  true / false  |
 
 <!-- tabs:start -->
 
